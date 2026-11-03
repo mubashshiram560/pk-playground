@@ -1,0 +1,55 @@
+/* ==========================================================
+   Visualization Studio — small extras on top of theme.css
+   ========================================================== */
+.narrator code, .notes code, .lesson code, .tip-card code, .incoming-note code {
+  background: rgba(74, 163, 232, .14); border-radius: 6px; padding: 0 .3rem; font-size: .88em;
+}
+.sim-table td.hl-cell { background: var(--yellow) !important; font-weight: 800; }
+.sim-table td { transition: background .3s; }
+
+.studio-stack { display: grid; gap: 1.1rem; min-width: 0; }
+.viz-tip { margin-top: 1.2rem; }
+.viz-tip ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+.viz-tip li { margin-bottom: .25rem; }
+.tip-card { background: linear-gradient(160deg, #fff, var(--blue)); }
+kbd {
+  font-family: var(--mono); font-size: .8rem; background: #fff; border: 2px solid var(--line);
+  border-bottom-width: 4px; border-radius: 8px; padding: 0 .4rem;
+}
+
+.seg-stage .checks { width: min(460px, 100%); margin-inline: auto; }
+.seg-stage .banner { text-align: center; }
+.seg-empty { color: var(--muted); font-weight: 800; align-self: center; }
+.counter-val.small { font-size: 1.05rem; }
+.mini .sub { color: var(--muted); font-size: .8rem; font-weight: 700; margin-top: .2rem; }
+
+.cfg-note { font-size: .82rem; color: var(--muted); font-weight: 700; }
+.config .btn { font-size: .8rem; padding: .3rem .7rem; }
+
+.sandbox h3 { margin-bottom: .2rem; }
+.sandbox .sim-table { margin-top: .5rem; }
+.sandbox .row label { font-weight: 800; font-size: .85rem; display: inline-flex; gap: .35rem; align-items: center; }
+
+.db-error { margin-top: .5rem; }
+.table-title { font-weight: 900; font-size: .85rem; color: var(--muted); margin-bottom: .35rem; }
+.obj-line { font-family: var(--mono); font-size: .85rem; }
+.pipeline { margin-bottom: .7rem; }
+.stage .code-grid + .code-grid { margin-top: .8rem; }
+
+.how-controls { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-top: .6rem; }
+.how-controls div { background: #fff; border-radius: 16px; padding: .5rem .8rem; font-weight: 700; font-size: .9rem; border: 2px solid var(--line); }
+
+.carry[hidden] { display: none; }
+
+/* ---------- sketchy icons (replace standard emojis) ---------- */
+.sk { display: inline-block; width: 1.2em; height: 1.2em; vertical-align: -.26em; line-height: 1; flex: none; }
+.sk svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.big-card .emoji .sk { width: 1.1em; height: 1.1em; }
+.btn .sk, .chip .sk { width: 1.25em; height: 1.25em; }
+.node .n-emoji .sk { width: 1.15em; height: 1.15em; }
+.seg-pill .sk { width: 1em; height: 1em; }
+
+/* ---------- step jump controls ---------- */
+.ctl-nav { background: var(--lav); border-radius: 22px; padding: .45rem .6rem; }
+.scrub { display: flex; align-items: center; gap: .45rem; flex: 1 1 180px; font-weight: 800; font-size: .85rem; }
+.scrub input { accent-color: var(--pink-3); width: 100%; min-width: 120px; }

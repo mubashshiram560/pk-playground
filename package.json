@@ -1,0 +1,10 @@
+{
+  "name": "pk-playground",
+  "version": "1.0.0",
+  "description": "PK Playground: a beginner-friendly Primary Key learning tool with a Visualization Studio",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}

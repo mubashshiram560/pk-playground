@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primary Key · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <div class="studio-head">
+      <div class="crumbs"><a href="../index.html">🏠 Welcome</a> › 🔑 Primary Key</div>
+      <h1>🔑 Primary Key</h1>
+      <p>A Primary Key is the column (or columns) that gives every row its own identity.</p>
+    </div>
+
+    <div class="two-col">
+      <section class="card lesson">
+        <h2>🧠 The big idea</h2>
+        <ul>
+          <li>It must be <b>unique</b> — no two rows share it.</li>
+          <li>It must be <b>NOT NULL</b> — every row has one.</li>
+          <li>A table has exactly <b>one</b> Primary Key (it may use several columns).</li>
+          <li>Other tables point to it with <b>foreign keys</b>.</li>
+        </ul>
+      </section>
+      <section class="card lesson">
+        <h2>💻 In SQL</h2>
+        <pre class="codebox" id="sql"></pre>
+        <h2 style="margin-top:.8rem">☕ In JPA</h2>
+        <pre class="codebox" id="jpa"></pre>
+      </section>
+    </div>
+
+    <section class="card tip-card" style="margin-top:1.1rem">
+      <h2>🎨 Want to see it move?</h2>
+      <p>Open the Primary Key visualization to watch unique IDs get accepted and duplicates &amp; NULLs get rejected.</p>
+      <a class="btn btn-mint" href="../visualization/primary-key.html" style="text-decoration:none;display:inline-block">Open the visualization ▶</a>
+    </section>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script>
+    PK.chrome('pk', '../');
+    document.getElementById('sql').innerHTML = [
+      'CREATE TABLE employee (',
+      '  emp_id BIGINT PRIMARY KEY,',
+      '  name VARCHAR(50) NOT NULL',
+      ');'
+    ].map(PK.hl).join('\n');
+    document.getElementById('jpa').innerHTML = [
+      '@Entity',
+      'public class Employee {',
+      '  @Id',
+      '  private Long id;',
+      '}'
+    ].map(PK.hl).join('\n');
+  </script>
+</body>
+</html>

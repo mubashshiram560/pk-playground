@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generation Strategy Visualization · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <div class="studio-head">
+      <div class="crumbs"><a href="index.html">🎨 Visualization Studio</a> › ⚙️ Generation Strategy</div>
+      <h1>⚙️ Generation Strategy Visualization</h1>
+      <p>Who creates the ID, and when? Pick a strategy and follow one new employee, <b>Mia</b>, all the way into the database.</p>
+    </div>
+
+    <div class="studio-grid">
+      <section class="card stage" aria-label="Generation flowchart">
+        <div class="group-label">Who generates the ID?</div>
+        <div class="chip-group" id="gStrat"></div>
+        <div class="group-label">JPA <code>@GeneratedValue</code> strategies</div>
+        <div class="chip-group" id="gJpa"></div>
+
+        <div class="stage-title"><span id="flowTitle"></span><small>one INSERT, step by step</small></div>
+        <div class="flow-layout">
+          <div class="flow" id="flow" aria-label="Flowchart"></div>
+          <div class="state-panel" id="state"></div>
+        </div>
+        <div class="group-label" style="margin-top:.9rem">What the code / SQL looks like right now</div>
+        <pre class="codebox" id="code"></pre>
+        <div id="controls"></div>
+      </section>
+
+      <aside class="side">
+        <div class="card narrator" id="narrator" aria-live="polite"></div>
+        <div class="card notes" id="notes"></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/viz-generation.js"></script>
+</body>
+</html>

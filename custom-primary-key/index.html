@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Primary Key · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <div class="studio-head">
+      <div class="crumbs"><a href="../index.html">🏠 Welcome</a> › ✨ Custom Primary Key</div>
+      <h1>✨ Custom Primary Key</h1>
+      <p>Instead of plain 1, 2, 3, you can design IDs that carry meaning, like <code>EMP001</code>.</p>
+    </div>
+
+    <div class="two-col">
+      <section class="card lesson">
+        <h2>🧩 Popular recipes</h2>
+        <ul>
+          <li>🏷️ <b>Prefix + Sequence</b> — <code>EMP001</code></li>
+          <li>📅 <b>Date + Sequence</b> — <code>EMP-20261103-001</code></li>
+          <li>🧬 <b>UUID</b> — random 128-bit ID</li>
+          <li>🎫 <b>Random / Token</b> — <code>TKN-X7K2Q9</code></li>
+          <li>🏢 <b>Business rules</b> — <code>ENG-FT-26-001</code></li>
+          <li>✍️ <b>Manual</b> — you type it, you validate it</li>
+        </ul>
+      </section>
+      <section class="card lesson">
+        <h2>☕ A JPA sketch</h2>
+        <pre class="codebox" id="jpa"></pre>
+        <p class="cfg-note" style="margin-top:.5rem">Simplified for learning. Real projects usually use a database sequence for the counter part.</p>
+      </section>
+    </div>
+
+    <section class="card tip-card" style="margin-top:1.1rem">
+      <h2>🎨 Want to see it move?</h2>
+      <p>Build custom IDs from coloured segments and follow the code all the way to the database.</p>
+      <a class="btn btn-mint" href="../visualization/custom-id.html" style="text-decoration:none;display:inline-block">Custom ID visualization ▶</a>
+      <a class="btn btn-lav" href="../visualization/code-to-database.html" style="text-decoration:none;display:inline-block">Code-to-Database ▶</a>
+    </section>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script>
+    PK.chrome('custom', '../');
+    document.getElementById('jpa').innerHTML = [
+      '@Id',
+      'private String id;   // e.g. "EMP001"',
+      '',
+      '@PrePersist',
+      'void makeId() {',
+      '  id = "EMP" + String.format("%03d", nextNumber());',
+      '}'
+    ].map(PK.hl).join('\n');
+  </script>
+</body>
+</html>

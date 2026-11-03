@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualization Studio · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1><span class="floaty">🎨</span> Visualization Studio</h1>
+      <p>Watch Primary Keys come alive! Pick a card, press <b>Start</b> (or tap <b>Next</b> one step at a time) and see what really happens inside a database. 🐣</p>
+    </section>
+
+    <section class="big-cards" aria-label="Visualizations">
+      <a class="big-card bg-pink" href="primary-key.html">
+        <span class="emoji">🔑</span>
+        <h2>Primary Key Visualization</h2>
+        <p>Watch an employee table accept unique IDs and reject duplicates &amp; NULLs. Single and composite keys!</p>
+        <span class="go">Open ▶</span>
+      </a>
+      <a class="big-card bg-lav" href="generation.html">
+        <span class="emoji">⚙️</span>
+        <h2>Generation Strategy Visualization</h2>
+        <p>Follow an ID from birth to database: manual, database-side, app-side, ORM — plus JPA AUTO, IDENTITY, SEQUENCE &amp; TABLE.</p>
+        <span class="go">Open ▶</span>
+      </a>
+      <a class="big-card bg-blue" href="custom-id.html">
+        <span class="emoji">🧩</span>
+        <h2>Custom ID Visualization</h2>
+        <p>Build IDs like <code>EMP001</code> out of coloured pieces: prefix, date, sequence, UUID, tokens and business rules.</p>
+        <span class="go">Open ▶</span>
+      </a>
+      <a class="big-card bg-mint" href="code-to-database.html">
+        <span class="emoji">💻</span>
+        <h2>Code-to-Database Visualization</h2>
+        <p>Java Entity → ID Generation → Repository Save → SQL Insert → Table. See code and database light up together.</p>
+        <span class="go">Open ▶</span>
+      </a>
+    </section>
+
+    <section class="card tip-card">
+      <h2>🎮 How the controls work</h2>
+      <p>Every visualization has the same friendly buttons:</p>
+      <div class="how-controls">
+        <div>▶ <b>Start</b> — plays all steps automatically</div>
+        <div>⏸ <b>Pause</b> — stops wherever you are</div>
+        <div>◀ ▶ <b>Previous / Next</b> — one step at a time</div>
+        <div>⏪ ⏩ <b>Back 3 / Forward 3</b> — jump several steps (or drag the step slider)</div>
+        <div>🔁 <b>Replay</b> — start again from step 1 and play</div>
+        <div>↺ <b>Reset</b> — back to step 1, paused</div>
+        <div>🐢 🐇 <b>Speed</b> — slow it down or speed it up</div>
+      </div>
+      <p style="margin-top:.7rem">Tip: on a computer you can also use <kbd>←</kbd> / <kbd>→</kbd> for 1 step, and <kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd> for 3 steps. 💡</p>
+      <p style="margin:0;color:var(--muted);font-weight:700">Everything here is a simulation made with JavaScript — no real Java compiler or database is involved. 🧸</p>
+    </section>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script>PK.chrome('viz', '../');</script>
+</body>
+</html>

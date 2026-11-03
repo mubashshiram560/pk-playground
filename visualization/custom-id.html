@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom ID Visualization · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <div class="studio-head">
+      <div class="crumbs"><a href="index.html">🎨 Visualization Studio</a> › 🧩 Custom ID</div>
+      <h1>🧩 Custom ID Visualization</h1>
+      <p>A custom ID is built from small coloured pieces. Pick a recipe, tweak the settings, and watch <code>EMP001 → EMP002 → EMP003</code> being made.</p>
+    </div>
+
+    <div class="studio-grid">
+      <section class="card stage" aria-label="Custom ID builder">
+        <div class="group-label">Choose an ID recipe</div>
+        <div class="chip-group" id="types"></div>
+        <div class="config" id="config" aria-label="Settings"></div>
+
+        <div class="stage-title"><span id="typeTitle"></span><small>coloured segments</small></div>
+        <div class="seg-stage" id="segStage" aria-live="polite"></div>
+        <div class="id-history" id="history"></div>
+        <div id="controls"></div>
+      </section>
+
+      <aside class="side">
+        <div class="card narrator" id="narrator" aria-live="polite"></div>
+        <div class="card notes" id="notes"></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/viz-custom-id.js"></script>
+</body>
+</html>

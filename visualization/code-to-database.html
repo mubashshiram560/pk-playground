@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code-to-Database Visualization · PK Playground</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/visualization.css">
+</head>
+<body>
+  <main class="page">
+    <div class="studio-head">
+      <div class="crumbs"><a href="index.html">🎨 Visualization Studio</a> › 💻 Code-to-Database</div>
+      <h1>💻 Code-to-Database Visualization</h1>
+      <p>Click <b>Next</b> and watch a line of Java light up — and the matching SQL and table row light up with it. (A friendly simulation: no real Java or database runs here.)</p>
+    </div>
+
+    <div class="studio-grid">
+      <section class="card stage" aria-label="Code to database flow">
+        <div class="group-label">Pick an ID strategy to follow</div>
+        <div class="chip-group" id="strats"></div>
+        <div class="config" id="config" hidden></div>
+
+        <div class="pipeline" id="pipeline" aria-label="Pipeline"></div>
+
+        <div class="code-grid">
+          <div class="panel"><h4>☕ Java</h4><pre class="code-lines" id="java"></pre></div>
+          <div class="panel"><h4>🗄️ SQL</h4><pre class="code-lines" id="sql"></pre></div>
+        </div>
+        <div class="code-grid">
+          <div class="panel"><h4>🧸 Java object in memory</h4><div class="obj-line" id="obj"></div></div>
+          <div class="panel"><h4>📋 Database table: employee</h4><div class="table-wrap" id="table"></div><div id="dbErr"></div></div>
+        </div>
+        <div id="controls"></div>
+      </section>
+
+      <aside class="side">
+        <div class="card narrator" id="narrator" aria-live="polite"></div>
+        <div class="card notes" id="notes"></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/viz-code-db.js"></script>
+</body>
+</html>
